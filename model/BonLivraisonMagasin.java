@@ -2,6 +2,7 @@ package fr.sigl.miwa.model;
 
 import java.sql.Date;
 import java.util.ArrayList;
+import java.util.HashMap;
 /**
  * Respo: FOU- Nicolas GUEUGNON
  * @author Nicolas GUEUGNON
@@ -14,8 +15,8 @@ public class BonLivraisonMagasin{
 	//attribute
 	private Magasin mag;
 	private Date exp;
-	private ArrayList<Article> articles;
-	private int[] quantity;
+	private HashMap<Article, Integer> articles;
+
 	
 	//constructor
 	public BonLivraisonMagasin(Date date){
@@ -33,10 +34,10 @@ public class BonLivraisonMagasin{
 		return this.exp;
 	}
 	public int get_quant( Article art){
-		if(this.articles.contains(art)==false){
+		if(this.articles.containsKey(art)==false){
 			return 0;
 		}
-		return this.quantity[this.articles.indexOf(art)];
+		return this.articles.get(art);
 	}
 	
 	//Setter
@@ -48,18 +49,17 @@ public class BonLivraisonMagasin{
 	}
 	public void add_article(Article art, int quant){
 		if (quant>0){
-			this.quantity[this.quantity.length]=quant;
-			this.articles.add(art);
+			this.articles.put(art,quant);
 			}
 	}
 	public void set_quant( Article art, int q){
 		if(q>0){
-			if(this.articles.contains(art)==false){
-				this.articles.add(art);
-				this.quantity[this.articles.size()]=q;
+			if(this.articles.containsKey(art)==false){
+				this.articles.put(art,q);
 			}
-			else{
-				this.quantity[this.articles.indexOf(this.articles.indexOf(art))]=q;
+			else
+				{
+				this.articles.replace(art,q);
 			}
 		}
 	}
