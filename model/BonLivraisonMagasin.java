@@ -1,5 +1,6 @@
 package fr.sigl.miwa.model;
 
+import java.io.Serializable;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,8 +11,9 @@ import java.util.HashMap;
  * {@link Magasin, Article}
  */
 
-public class BonLivraisonMagasin{
+public class BonLivraisonMagasin implements Serializable {
 	
+	private static final long serialVersionUID = -4592028971815943945L;
 	//attribute
 	private Magasin mag;
 	private Date exp;

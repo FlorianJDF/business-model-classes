@@ -1,12 +1,15 @@
 package fr.sigl.miwa.model;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashMap;
 
 /**
  * respo : BAC
  */
-public class BonCommande {
+public class BonCommande implements Serializable{
+	
+	private static final long serialVersionUID = -2533686978382057464L;
 	private Magasin magEmetteur;
 	private Magasin magDestinataire;
 	private Date dateEmission;

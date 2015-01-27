@@ -1,11 +1,14 @@
 package fr.sigl.miwa.model;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 /**
  * Respo : CAI
  */
-public class Client {
-    private static HashSet<Client> CList = new HashSet<Client>(); // La liste de tous les clients instanciés
+public class Client implements Serializable{
+	
+	private static final long serialVersionUID = 7421181851653101925L;
+	private static HashSet<Client> CList = new HashSet<Client>(); // La liste de tous les clients instanciés
     private static int cptID = 0;
 
     private String ID; // "clientX" où X est un nombre supérieur ou égale à 0

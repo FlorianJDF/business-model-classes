@@ -1,9 +1,15 @@
 package fr.sigl.miwa.model;
+
+import java.io.Serializable;
+
 /**
  * Respo : CAI
  */
-public class Caisse {
-    private static int cptID = 0;
+public class Caisse implements Serializable{
+	
+	private static final long serialVersionUID = 3717197955786933338L;
+
+	private static int cptID = 0;
 
     private String ID;// "caisseX" où X est un nombre supérieur ou égale à 0
     private Magasin magasin;

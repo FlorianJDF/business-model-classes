@@ -1,10 +1,13 @@
 package fr.sigl.miwa.model;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * respo : FID
  */
-public class Coupon {
+public class Coupon implements Serializable{
+	
+	private static final long serialVersionUID = 613340781947313443L;
 	private int id;
 	private Article article;
 	private float montant;

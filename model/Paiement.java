@@ -1,8 +1,13 @@
 package fr.sigl.miwa.model;
+
+import java.io.Serializable;
+
 /**
  * Respo : SWE
  */
-public class Paiement {
+public class Paiement implements Serializable{
+	
+	private static final long serialVersionUID = 5019131141409550332L;
 	private int num_CB;
 	private int montant;
 	

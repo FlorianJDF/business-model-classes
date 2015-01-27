@@ -1,12 +1,14 @@
 package fr.sigl.miwa.model;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Respo : referentiel (RIO)
  */
 
-public class Promotion
-{
+public class Promotion implements Serializable{
+	
+	private static final long serialVersionUID = -3202295978104610284L;
 	private int rabais; //C'est un pourcentage
 	private Date date_debut;
 	private Date date_fin;

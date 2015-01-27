@@ -1,4 +1,7 @@
 package fr.sigl.miwa.model;
+
+import java.io.Serializable;
+
 /**
  * Respo : FOU
  * @author Nicolas GUEUGNON
@@ -8,7 +11,9 @@ package fr.sigl.miwa.model;
  */
 
 
-public class Fournisseur {
+public class Fournisseur implements Serializable{
+	
+	private static final long serialVersionUID = -2510587748753056483L;
 	//TO FIX en unique
 	private int ID;
 	private CatalogueFournisseur catalogueFournisseur;

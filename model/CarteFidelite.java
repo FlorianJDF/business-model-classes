@@ -1,10 +1,13 @@
 package fr.sigl.miwa.model;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * respo : FID
  */
-public class CarteFidelite {
+public class CarteFidelite implements Serializable{
+	
+	private static final long serialVersionUID = 7506439995045288185L;
 	private int id;
 	private Client client;
 	private int nbPoints;

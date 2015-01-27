@@ -1,12 +1,15 @@
 package fr.sigl.miwa.model;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.HashSet;
 
 /**
  * Respo : CAI
  */
-public class Magasin {
-    private static HashSet<Magasin> MList = new HashSet<Magasin>();
+public class Magasin implements Serializable{
+    
+	private static final long serialVersionUID = -4301790753475993586L;
+	private static HashSet<Magasin> MList = new HashSet<Magasin>();
     private static int cptID = 0;
 
     private String ID; // "magasinX" où X est un nombre supérieur ou égale à 0

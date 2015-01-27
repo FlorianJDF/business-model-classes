@@ -1,4 +1,5 @@
 package fr.sigl.miwa.model;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
 
@@ -9,7 +10,9 @@ import java.util.HashSet;
  * @version 1.0
  * {@link Fournisseur, Article}
  */
-public class CatalogueFournisseur {
+public class CatalogueFournisseur implements Serializable{
+	
+	private static final long serialVersionUID = 6110264127606676230L;
 	// Attributes
 	private Fournisseur fou;// ID
 	private ArrayList<Article> Articles;

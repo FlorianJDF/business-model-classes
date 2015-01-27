@@ -1,4 +1,5 @@
 package fr.sigl.miwa.model;
+import java.io.Serializable;
 import java.util.HashSet;
 
 /**
@@ -9,7 +10,9 @@ import java.util.HashSet;
  * {@link Prix, Promotion}
  */
 
-public class Article {
+public class Article implements Serializable{
+	
+	private static final long serialVersionUID = -8666384741891748177L;
 	
 	//Attribute
 	private String name; // the ID

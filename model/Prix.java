@@ -1,11 +1,16 @@
 package fr.sigl.miwa.model;
+
+import java.io.Serializable;
+
 /**
  * 
  * @author Nicolas GUEUGNON
  * @category Model
  * @version 1.0
  */
-public class Prix {
+public class Prix implements Serializable{
+	
+	private static final long serialVersionUID = 5665241339693427157L;
 	//Attribut
 	private float prixHT;
 	private float taux;

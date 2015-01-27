@@ -1,4 +1,5 @@
 package fr.sigl.miwa.model;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -6,8 +7,10 @@ import java.util.HashSet;
 /**
  * Respo : CAI
  */
-public class TicketDeVente {
-    private static int cptID = 0; // compteur pour le nombre des tickets générés
+public class TicketDeVente implements Serializable{
+   
+	private static final long serialVersionUID = -8425255401761255831L;
+	private static int cptID = 0; // compteur pour le nombre des tickets générés
     public static HashSet<TicketDeVente> TDVList = new HashSet<TicketDeVente>();
 
     private String ID; // "ticketX" où X est un nombre supérieur ou égale à 0
